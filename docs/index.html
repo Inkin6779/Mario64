@@ -64,7 +64,22 @@
                 <button id="btnPlayGame" class="btn btn-primary mt-4" onclick="myClass.loadRom();" rv-if="data.hasRoms"
                     rv-disabled="data.moduleInitializing">Play Game</button>
                 <button id="btnUploadRom" class="btn btn-primary mt-4" onclick="myApp.uploadBrowse('roms/insert.z64')" 
-                    rv-disabled="data.moduleInitializing">Play</button>
+    disabled id="uploadButton">Play</button>
+
+<script>
+    var data = {
+        moduleInitializing: false // Set this based on your application logic
+    };
+
+    function toggleButton() {
+        var uploadButton = document.getElementById('uploadButton');
+        uploadButton.disabled = data.moduleInitializing;
+    }
+
+    // Call toggleButton whenever data.moduleInitializing changes
+    toggleButton();
+</script>
+
                 <button type="button" class="btn btn-primary mt-4" id="btnRemap" onclick="myApp.showRemapModal()">
                     Remap Buttons
                 </button>
