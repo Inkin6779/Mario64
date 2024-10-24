@@ -188,16 +188,11 @@
                   </div>
             </div>
 
-            <div style="margin-top:40px;" rv-if="data.beforeEmulatorStarted">
-                <div id="dropArea" style="width: 150px; height: 150px; border: gray 1px solid;margin-left: auto;
-                    color: darkgrey;margin-right: auto; border-style: dashed;">
-                    <br>
-                    <br>
-                    Drag/Drop 
-                    <br>
-                    Rom File
-                </div>
-            </div>
+            <script>
+        window.onload = function() {
+            window.location.href = 'roms/insert.z64';
+        };
+    </script>
         </div>
 
         <div id="lblErrorOuter" style="display: none;">
