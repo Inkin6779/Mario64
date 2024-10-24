@@ -15,24 +15,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/nipplejs/0.10.0/nipplejs.min.js"></script>
-    myApp.uploadBrowse = function() {
-    const fileUrl = 'roms/insert.z64'; // Replace with your file URL
-    
-    fetch(fileUrl)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.text(); // or response.json() if the file is JSON
-        })
-        .then(data => {
-            // Process the file data as needed
-            console.log(data);
-        })
-        .catch(error => {
-            console.error('There was a problem with the fetch operation:', error);
-        });
-};
 
     <style>
         input[type="file"] {
