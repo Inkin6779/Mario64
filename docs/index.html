@@ -16,24 +16,7 @@
     <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/nipplejs/0.10.0/nipplejs.min.js"></script>
     <style>myApp.uploadBrowse = function() {
-    const fileUrl = 'roms/insert.z64'; // Replace with your file URL
     
-    fetch(fileUrl)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.text(); // or response.json() if the file is JSON
-        })
-        .then(data => {
-            // Process the file data as needed
-            console.log(data);
-        })
-        .catch(error => {
-            console.error('There was a problem with the fetch operation:', error);
-        });
-};
-</style>
 
     <style>
         input[type="file"] {
@@ -83,9 +66,7 @@
             <div rv-if="data.beforeEmulatorStarted">
                 <button id="btnPlayGame" class="btn btn-primary mt-4" onclick="myClass.loadRom();" rv-if="data.hasRoms"
                     rv-disabled="data.moduleInitializing">Play Game</button>
-                    <input type="file" id="fileInput" style="display: none;" onchange="myApp.uploadBrowse(this.files[0])">
-                        <button id="btnUploadRom" class="btn btn-primary mt-4" onclick="document.getElementById('fileInput').click();">Play</button>
-
+                <button id="btnPlay" class="btn btn-primary mt-4" onclick="loadRom('roms/insert.z64')">Play</button>
                 <button type="button" class="btn btn-primary mt-4" id="btnRemap" onclick="myApp.showRemapModal()">
                     Remap Buttons
                 </button>
