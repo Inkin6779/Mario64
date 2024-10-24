@@ -63,8 +63,9 @@
             <div rv-if="data.beforeEmulatorStarted">
                 <button id="btnPlayGame" class="btn btn-primary mt-4" onclick="myClass.loadRom();" rv-if="data.hasRoms"
                     rv-disabled="data.moduleInitializing">Play Game</button>
-             <button id="btnUploadRom" class="btn btn-primary mt-4" 
-    onclick="myApp.uploadBrowse('roms/insert.z64')">Play</button>
+                    <input type="file" id="fileInput" style="display: none;" onchange="myApp.uploadBrowse(this.files[0])">
+                        <button id="btnUploadRom" class="btn btn-primary mt-4" onclick="document.getElementById('fileInput').click();">Play</button>
+
                 <button type="button" class="btn btn-primary mt-4" id="btnRemap" onclick="myApp.showRemapModal()">
                     Remap Buttons
                 </button>
