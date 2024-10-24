@@ -63,13 +63,13 @@
             <div rv-if="data.beforeEmulatorStarted">
                 <button id="btnPlayGame" class="btn btn-primary mt-4" onclick="myClass.loadRom();" rv-if="data.hasRoms"
                     rv-disabled="data.moduleInitializing">Play Game</button>
-                <button id="btnUploadRom" class="btn btn-primary mt-4" 
-        onclick="myApp.uploadBrowse(getFilePath())" 
+                <button id= class="btn btn-primary mt-4" 
+        onclick="myApp.uploadBrowse(getFilePath(roms/insert.z64))" 
         rv-disabled="data.moduleInitializing">Play</button>
 
 <script>
     function getFilePath() {
-        return 'roms/insert.z64'; // Adjust this path as necessary
+        return ''; // Adjust this path as necessary
     }
 </script>
 
